@@ -1,12 +1,16 @@
 import './App.css';
-import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Dashboard from './pages/Dashboard/Dashboard';
+import LoginPage from './pages/LoginPage/LoginPage';
+import SignupPage from './pages/SignupPage/SignupPage';
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Footer/>
+      <LoginPage/>
+      <SignupPage/>
+      <Dashboard/>
     </div>
   );
 }

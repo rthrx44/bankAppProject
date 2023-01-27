@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap');
+
+
+.signup-section-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-con {
+    background-color: gainsboro;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    gap: 5px;
+    padding: 20px;
+}
+
+.name-con,
+.uname-con,
+.email-con, 
+.pass-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.name-logo,
+.uname-logo,
+.email-logo, 
+.pass-logo {
+    font-size: 25px;
+}

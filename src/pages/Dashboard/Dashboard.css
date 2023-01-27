@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap');
+
+
+.dashboard-section-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91.5vh;
+    width: auto;
+    border: 1px solid red;
+}
+
+.dashboard-con {
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    gap: 5px;
+    padding: 20px;
+}
+
+.card-info {
+    border: 1px solid red;
+    height: 250px;
+    width: 400px;
+}
+
+.user-info {
+    border: 1px solid red;
+    height: 250px;
+    width: 400px;
+}
+
