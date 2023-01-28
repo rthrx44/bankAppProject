@@ -1,10 +1,10 @@
 import React from 'react'
 import './Header.css'
-import { Login } from '../Buttons/Buttons'
+import { LoginBtn } from '../Buttons/Buttons'
 
 
 function  Header () {
-  const links = ['Home', 'About', 'Contact Us']
+  // const links = ['Home', 'About', 'Contact Us']
 
   return (
     <main className='header-container'>
@@ -14,10 +14,10 @@ function  Header () {
       </div>
       <div>
         <nav className='nav-container'>
-          {links.map(text => (
+          {/* {links.map(text => (
             <a href='/' className='navlinks'>{text}</a>
-          ))}
-          <Login/>
+          ))} */}
+          <LoginBtn/>
         </nav>
       </div>
     </main>

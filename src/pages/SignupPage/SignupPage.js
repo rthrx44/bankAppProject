@@ -1,5 +1,5 @@
 import React from 'react'
-import { SignUp } from '../../components/Buttons/Buttons'
+import { SignUpBtn } from '../../components/Buttons/Buttons'
 import './SignupPage.css'
 import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
@@ -26,7 +26,7 @@ function SignupPage() {
                     <span className='pass-logo'><RiLockPasswordLine/></span>
                     <input placeholder='Password'></input>
                 </div>
-                <SignUp/>
+                <SignUpBtn/>
             </div>
         </section>
     </main>

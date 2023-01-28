@@ -1,7 +1,24 @@
-import React from 'react'
+import { useState } from 'react'
 import './Dashboard.css'
 
 function Dashboard() {
+    const [inputValue, setInputValue] = useState('')
+    const [accountBalance, setAccountBalance] = useState(0)
+
+    const onInputChange = (e) => {
+        setInputValue(e.target.value)
+    }
+
+    const onDeposit = () => {
+        setAccountBalance(accountBalance + +inputValue)
+    }
+
+    const onWithdraw = () => {
+        if (inputValue > accountBalance) {
+            return alert("Error: Insufficient funds")
+        }
+        setAccountBalance(accountBalance - +inputValue)
+    }
   return (
     <main>
         <section className='dashboard-section-con'>
@@ -19,7 +36,11 @@ function Dashboard() {
                         <div>Username :</div>
                         <div>Email :</div>
                     <div className='balance-con'>Account Balance</div>
-                        <div>₱ 0</div>
+                        <div>₱ {accountBalance}</div>
+                        <input type='text' value={inputValue} onChange={onInputChange}></input>
+                        <button onClick={onDeposit}>Deposit</button>
+                        <button onClick={onWithdraw}>Withdraw</button>
+                        <button>Send Money</button>
                 </div>
             </div>
         </section>

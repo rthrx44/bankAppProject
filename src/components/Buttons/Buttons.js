@@ -2,7 +2,7 @@ import React from 'react'
 import './Buttons.css'
 
 
-export const Login = () => {
+export const LoginBtn = () => {
   return (
     <div className='login-container'>
       <button className='loginBtn'>Login</button>
@@ -12,7 +12,7 @@ export const Login = () => {
 
 
 
-export const SignUp = () => {
+export const SignUpBtn = () => {
   return (
     <div className='signup-container'>
       <button className='signupBtn'>Sign Up</button>

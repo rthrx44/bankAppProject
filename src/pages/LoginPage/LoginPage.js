@@ -1,5 +1,5 @@
 import React from 'react'
-import { Login } from '../../components/Buttons/Buttons'
+import { LoginBtn } from '../../components/Buttons/Buttons'
 import './LoginPage.css'
 import { AiOutlineUser } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
@@ -17,7 +17,7 @@ function LoginPage() {
                 <span className='password-logo'><RiLockPasswordLine/></span>
                 <input placeholder='Password'></input>
             </div>
-            <Login/>
+            <LoginBtn/>
             <div className='option-con'>
                 <button className='rBtn'>Register Now</button>
                 <span>Forgot<button className='uBtn'>Username</button><span>or</span><button className='pBtn'>Password</button></span>
