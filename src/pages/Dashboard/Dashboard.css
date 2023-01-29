@@ -5,9 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 91.5vh;
+    height: 91vh;
     width: auto;
-    border: 1px solid red;
 }
 
 .dashboard-con {
@@ -19,19 +18,164 @@
     align-items: center;
     height: auto;
     width: auto;
-    gap: 5px;
     padding: 20px;
 }
 
 .card-info {
-    border: 1px solid red;
-    height: 250px;
-    width: 400px;
+    height: 350px;
+    width: 370px;
 }
 
 .user-info {
-    border: 1px solid red;
-    height: 250px;
+    height: 350px;
     width: 400px;
 }
 
+.card-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardface {
+    background-color: darkcyan;
+    background-image: url('/src/assests/img/R.png');
+    background-size: 355px 210px;
+    height: 210px;
+    width: 350px;
+    border-radius: 10px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.cardlogo {
+    display: flex;
+    justify-content: end;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 10px 0 0 ;
+}
+
+.cardchip {
+    padding-left: 10px;
+}
+
+.chip {
+    height: 32px;
+    width: 45px;
+}
+
+.cardfacedetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.c-info {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0 0 0;
+}
+
+.card-logo {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 0 0;
+}
+
+.mclogo {
+    height: 40px;
+    width: 50px;
+}
+
+.cdetails-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.card-details-con {
+    background-color: darkgray;
+    border-radius: 10px;
+    height: 130px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 25px 0 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card-details {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+.cdetails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-con {
+    margin: 0 10px 0 10px ;
+}
+
+.user-info {
+    background-color: darkgray;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.user-details-con {
+    background-color: gainsboro;
+    border-radius: 10px;
+    height: 140px;
+    padding: 5px 0 0 10px;
+    margin: 0 0 10px 0;
+}
+.amountText {
+    font-size: 35px;
+}
+
+.inputamount {
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    width: 370px;
+    margin: 0 0 10px 0;
+}
+
+.transacBtn {
+    border-radius: 10px;
+    height: 180px;
+    width: 370px;
+}
+
+.depositBtn,
+.withdrawBtn,
+.sendmoneyBtn {
+    border: none;
+    border-radius: 5px;
+    height: 110px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.withdrawBtn {
+    margin: 0 5px 0 5px;
+}

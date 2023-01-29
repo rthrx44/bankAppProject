@@ -1,10 +1,10 @@
-import React from 'react'
+import { useState } from 'react'
 import './Header.css'
 import { LoginBtn } from '../Buttons/Buttons'
 
 
-function  Header () {
-  // const links = ['Home', 'About', 'Contact Us']
+function  Header ({handlePageChange}) {
+  const links = ['Home', 'About', 'Contact Us']
 
   return (
     <main className='header-container'>
@@ -14,10 +14,10 @@ function  Header () {
       </div>
       <div>
         <nav className='nav-container'>
-          {/* {links.map(text => (
-            <a href='/' className='navlinks'>{text}</a>
-          ))} */}
-          <LoginBtn/>
+          {links.map((text, index) => (
+            <a href='/' key={index} className='navlinks'>{text}</a>
+          ))}
+          <LoginBtn handlePageChange={handlePageChange} login={'login'}/>
         </nav>
       </div>
     </main>

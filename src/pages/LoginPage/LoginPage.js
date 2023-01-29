@@ -1,25 +1,25 @@
 import React from 'react'
-import { LoginBtn } from '../../components/Buttons/Buttons'
+import { SignInBtn } from '../../components/Buttons/Buttons'
 import './LoginPage.css'
-import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 
-function LoginPage() {
+function LoginPage({handlePageChange}) {
   return (
     <main>
         <section className='login-section-con'>
             <div className='login-con'>
                 <div className='username-con'>
                     <span className='username-logo'><AiOutlineUser/></span>
-                    <input placeholder='Username'></input>
+                    <input placeholder='Username' type='text'></input>
                 </div>
             <div className='password-con'>
                 <span className='password-logo'><RiLockPasswordLine/></span>
-                <input placeholder='Password'></input>
+                <input placeholder='Password' type='password'></input>
             </div>
-            <LoginBtn/>
+            <SignInBtn handlePageChange={handlePageChange} dashb={'dashb'}/>
             <div className='option-con'>
-                <button className='rBtn'>Register Now</button>
+                <button className='rBtn' onClick={() => handlePageChange('signup')}>Register Now</button>
                 <span>Forgot<button className='uBtn'>Username</button><span>or</span><button className='pBtn'>Password</button></span>
             </div>
         </div>
