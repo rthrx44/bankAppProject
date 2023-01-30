@@ -1,7 +1,7 @@
 import React from 'react'
 import { SignInBtn } from '../../components/Buttons/Buttons'
 import './LoginPage.css'
-import { AiOutlineUser, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { AiOutlineUser } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 
 function LoginPage({handlePageChange}) {

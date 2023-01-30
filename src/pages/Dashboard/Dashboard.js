@@ -2,6 +2,9 @@ import { useState } from 'react'
 import './Dashboard.css'
 import cardchip from '../../assests/img/cardchip.png'
 import mlogo from '../../assests/img/mlogo.png'
+import depositmoney from '../../assests/img/depositmoney.png'
+import withdrawmoney from '../../assests/img/withdrawmoney.png'
+import sendmoney from '../../assests/img/sendmoney.png'
 
 function Dashboard() {
     const [inputValue, setInputValue] = useState('')
@@ -56,7 +59,7 @@ function Dashboard() {
                         </div>
                     </div>
                     <div className='cdetails-con'>
-                        <div className='card-details-con'>Card Information<d></d>
+                        <div className='card-details-con'>Card Information
                             <div className='card-details'>
                                 <div className='cdetails'>Account Number : <div>1234 5678 9012 3456</div></div>
                                 <div className='cdetails'>Account Name : <div>RUTHER DIO</div></div>
@@ -71,28 +74,48 @@ function Dashboard() {
                         <div className='user-details-con'>
                             <div>Hi Name!</div>
                             <div className='balance-con'>
-                                <div className='amountText'>₱ {accountBalance}</div>
+                                <div 
+                                    className='amounttext'>₱ {accountBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                                </div>
                             </div>
                         </div>
-                        <div className='transacBtn'>
+                        <div className='transacbtn'>
                             <input 
                                 type='text' 
-                                placeholder='Amount'
+                                placeholder='Enter Amount'
                                 className='inputamount'
-                                value={inputValue} 
+                                value={inputValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} 
                                 onChange={onInputChange}>
                             </input>
-                            <div className='userBtn'>
+                            <div className='userbtn'>
                                 <button
-                                    className='depositBtn'
-                                    onClick={onDeposit}>Deposit
+                                    className='depositbtn'
+                                    onClick={onDeposit}>
+                                    <img 
+                                        src={depositmoney} 
+                                        alt='deposit money'
+                                        className='dplogo'
+                                    />
+                                        Deposit Money
                                 </button>
                                 <button
-                                    className='withdrawBtn'
-                                    onClick={onWithdraw}>Withdraw
+                                    className='withdrawbtn'
+                                    onClick={onWithdraw}>
+                                        <img 
+                                        src={withdrawmoney} 
+                                        alt='withdraw money'
+                                        className='wdlogo'
+                                    />
+                                        Withdraw Money
                                 </button>
                                 <button 
-                                    className='sendmoneyBtn'>Send Money
+                                    className='sendmoneybtn'>
+                                        <img 
+                                        src={sendmoney} 
+                                        alt='send money'
+                                        className='smlogo'
+                                    />
+                                        Send Money
                                 </button>
                             </div>
                         </div>

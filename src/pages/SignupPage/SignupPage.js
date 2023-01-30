@@ -4,12 +4,12 @@ import './SignupPage.css'
 import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { HiOutlineUserCircle } from "react-icons/hi";
+import useLocalStorage from '../../Utilities/useLocalSotrage'
 
 function SignupPage({handlePageChange}) {
-    const handleSignup = () => {
-    }
+    const [value, setValue] = useLocalStorage('')
 
-
+    
   return (
     <main>
         <section className='signup-section-con'>
