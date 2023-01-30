@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bankAppProject/static/css/main.bd1c4778.css",
-    "main.js": "/bankAppProject/static/js/main.7ccdf2a5.js",
+    "main.css": "/bankAppProject/static/css/main.b33af34a.css",
+    "main.js": "/bankAppProject/static/js/main.47c52200.js",
     "static/js/787.1fd915c2.chunk.js": "/bankAppProject/static/js/787.1fd915c2.chunk.js",
     "static/media/R.png": "/bankAppProject/static/media/R.a608aa5a545398b3e44e.png",
     "static/media/cardchip.png": "/bankAppProject/static/media/cardchip.03179d2b709c4d993c83.png",
     "index.html": "/bankAppProject/index.html",
-    "main.bd1c4778.css.map": "/bankAppProject/static/css/main.bd1c4778.css.map",
-    "main.7ccdf2a5.js.map": "/bankAppProject/static/js/main.7ccdf2a5.js.map",
+    "main.b33af34a.css.map": "/bankAppProject/static/css/main.b33af34a.css.map",
+    "main.47c52200.js.map": "/bankAppProject/static/js/main.47c52200.js.map",
     "787.1fd915c2.chunk.js.map": "/bankAppProject/static/js/787.1fd915c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd1c4778.css",
-    "static/js/main.7ccdf2a5.js"
+    "static/css/main.b33af34a.css",
+    "static/js/main.47c52200.js"
   ]
 }
