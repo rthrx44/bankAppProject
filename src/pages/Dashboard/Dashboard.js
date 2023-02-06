@@ -64,7 +64,7 @@ function Dashboard() {
                                 <div className='cdetails'>Account Number : <div>1234 5678 9012 3456</div></div>
                                 <div className='cdetails'>Account Name : <div>RUTHER DIO</div></div>
                                 <div className='cdetails'>Valid Thru : <div>31/29</div></div>
-                                <div className='cdetails'>CVV (Three Digit Security Code) : <div>064</div></div>
+                                <div className='cdetails'>CVC (Three Digit Security Code) : <div>064</div></div>
                             </div>
                         </div>
                     </div>

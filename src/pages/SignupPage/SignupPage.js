@@ -1,41 +1,93 @@
-import React from 'react'
+import { useState } from 'react'
 import { SignUpBtn } from '../../components/Buttons/Buttons'
 import './SignupPage.css'
 import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { HiOutlineUserCircle } from "react-icons/hi";
-import useLocalStorage from '../../Utilities/useLocalSotrage'
+import Modal from '../../components/Modals/Modal';
 
-function SignupPage({handlePageChange}) {
-    const [value, setValue] = useLocalStorage('')
+function SignupPage() {
+    const [modalInvalidFields, setModalInvalidFields] = useState(false);
 
+    const [userProfile, setUserProfile] = useState({
+        fullName: '',
+        userName: '',
+        email: '',
+        password: ''
+    })
+
+    const handleClosePopUp = (e) => {
+        setModalInvalidFields(false);
+    }
     
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let user = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+        const filteredUser = user.find(obj => 
+            (obj.email === userProfile.email || obj.userName === userProfile.userName)
+            )
+        if (!userProfile.fullName || !userProfile.userName || !userProfile.email || !userProfile.password) {
+            setModalInvalidFields(true);
+        } else if (filteredUser !== undefined) {
+            alert('user/email already exist')
+        } else {
+            user.push(userProfile);
+            localStorage.setItem("registeredUsers", JSON.stringify(user));
+        }
+    }
+
   return (
     <main>
         <section className='signup-section-con'>
-            <div className='signup-con'>
+            <form className='signup-con' onSubmit={handleSubmit}>
                 <div className='name-con'>
-                    <span className='name-logo'><HiOutlineUserCircle/></span>
-                    <input placeholder='Full Name' type='text'></input>
+                    <label className='name-logo'><HiOutlineUserCircle/></label>
+                    <input 
+                        placeholder='Full Name' 
+                        type='text' 
+                        onChange={(e) => setUserProfile(() => {
+                            userProfile.fullName = e.target.value
+                            return userProfile
+                        })}
+                        />
                 </div>
                 <div className='uname-con'>
-                    <span className='uname-logo'><AiOutlineUser/></span>
-                    <input placeholder='Username' type='text'></input>
+                    <label className='uname-logo'><AiOutlineUser/></label>
+                    <input 
+                        placeholder='Username'
+                        type='text'
+                        onChange={(e) => setUserProfile(() => {
+                            userProfile.userName = e.target.value
+                            return userProfile
+                        })}
+                        />
                 </div>
                 <div className='email-con'>
-                    <span className='email-logo'><AiOutlineMail/></span>
-                    <input placeholder='Email' type='text'></input>
-                </div>
-                <div className='email-con'>
-                    <span className='email-logo'><AiOutlineMail/></span>
-                    <input placeholder='Confirm Email' type='text'></input>
+                    <label className='email-logo'><AiOutlineMail/></label>
+                    <input 
+                        placeholder='Email' 
+                        type='text'
+                        onChange={(e) => setUserProfile(() => {
+                            userProfile.email = e.target.value
+                            return userProfile
+                        })}
+                        />
                 </div>
                 <div className='pass-con'>
-                    <span className='pass-logo'><RiLockPasswordLine/></span>
-                    <input placeholder='Password' type='password'></input>
+                    <label className='pass-logo'><RiLockPasswordLine/></label>
+                    <input 
+                        placeholder='Password' 
+                        type='password'
+                        onChange={(e) => setUserProfile(() => {
+                            userProfile.password = e.target.value
+                            return userProfile
+                        })}
+                        />
                 </div>
-                <SignUpBtn handlePageChange={handlePageChange} login={'login'}/>
-            </div>
+                <SignUpBtn type='submit'/>
+            </form>
+            {modalInvalidFields && <Modal closeModal={handleClosePopUp} message="Please Fill Up Required Fields Properly!"/>}
         </section>
     </main>
   )

@@ -1,9 +1,8 @@
-import { useState } from 'react'
 import './Header.css'
 import { LoginBtn } from '../Buttons/Buttons'
 
 
-function  Header ({handlePageChange}) {
+function  Header (props) {
   const links = ['Home', 'About', 'Contact Us']
 
   return (
@@ -17,7 +16,7 @@ function  Header ({handlePageChange}) {
           {links.map((text, index) => (
             <a href='/' key={index} className='navlinks'>{text}</a>
           ))}
-          <LoginBtn handlePageChange={handlePageChange} login={'login'}/>
+          <LoginBtn/>
         </nav>
       </div>
     </main>
