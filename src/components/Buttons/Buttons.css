@@ -34,3 +34,31 @@
     background-color: darkcyan;
     color: black;
 }
+
+.btn-close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;   
+    transition: all .3s;
+    background-color: rgb(174, 173, 173);
+    border-radius: 50%;
+    z-index: 999;
+    top: -17px;
+    right: -17px;
+}
+
+.btn-close:hover {
+    transform: scale(1.1);
+    cursor: pointer;   
+    background-color: darkgray; 
+}
+
+.btn-close:active{
+    transform: scale(0.7); 
+}

@@ -1,31 +1,41 @@
 import React from 'react'
 import './Buttons.css'
+import { SiIfixit } from "react-icons/si";
 
 
-export const LoginBtn = ({login, handlePageChange}) => {
-
-
+export const LoginBtn = () => {
   return (
     <div className='login-container'>
-      <button className='loginBtn' onClick={() => handlePageChange(login)}>Login</button>
+      <button className='loginBtn'>Login</button>
     </div>
   )
 }
 
-
-
-export const SignUpBtn = ({login, handlePageChange}) => {
+export const SignUpBtn = () => {
   return (
     <div className='signup-container'>
-      <button className='signupBtn' onClick={() => handlePageChange(login)}>Sign Up</button>
+      <button className='signupBtn'>Sign Up</button>
     </div>
   )
 }
 
-export const SignInBtn = ({dashb, handlePageChange}) => {
+export const SignInBtn = () => {
   return (
     <div className='signin-container'>
-      <button className='signinBtn' onClick={() => handlePageChange(dashb)}>Login</button>
+      <button className='signinBtn'>Login</button>
+    </div>
+  )
+}
+
+export const CloseButton = ({onClickClose}) => {
+  return (
+    <div className="close-container" >
+      <button
+        onClick={onClickClose}
+        className="btn-close"
+      >
+        <SiIfixit color="#008b8b" fontSize="3rem"/>
+      </button>
     </div>
   )
 }
